@@ -1,0 +1,74 @@
+
+A. Infra Red (IR) Tower Driver Installation
+-------------------------------------------
+The IR tower is used for downloading programs to the Minstorm Brick (RCX). It is supposed to be connected to the computer/laptop via RS232 serial cable.
+
+However, since most modern computers and laptops do not come with RS232, you need to use a USB to Serial converter cable. This is available from most electronics stores.
+
+Step 1
+	- Before you connect the cable you need to install a driver as follow:
+	- If you are installing on a new laptop/computer (Windows 7/8 or 10) then most likely you won't need a driver (but there is a driver CD that comes with the cable)
+	- If you are installing on Vista then run the vista driver installer under <this directory>\IR Tower - USB Drivers\Lego_IR_tower_driver_vista\Setup.exe
+	- If you are installing on XP then run the XP driver installer under <this directory>\IR Tower - USB Drivers\LegoTower (XP)\Setup.exe 
+
+Step 2
+	- Connect the tower to your PC to complete the installation. The green LED inside the IR tower should briefly turn on after the installation
+	-  Check that the green light turns on every time the tower is connected to the USB port on your PC.
+	- Now your IR tower is ready to transmit data.
+
+
+B. Troubleshooting Infra Red (IR) Serial Port Number and Settings
+-----------------------------------------------------------------
+If the IR Tower is working fine then skip this section to the next one
+
+Both the Mindstorm and NQC tools expects the Serial Port of the IR Tower to be in the range Port 1 through Port 4, you may need to use the Windows Device Manager to change the port number if it is different. (go to Device Manager and expand the Ports (COM &LPT) and check the port number. DOuble click on the entry associated with the USB-to-Serial converter; Select Port Settings and then Advanced ... button  and change "COM Port Number").
+
+Also, you may need to adjust the following:
+	Bits per second: 	2400 or 1200
+	Data Bits:		8
+	Parity:			Odd
+	Stop Bits:		1
+	Flow Control:		None
+If the IR Tower is not working then you may need to experiment with these settings.
+
+
+C. Install Bricxcc (Bricx Command Center)
+-----------------------------------------
+Bricx Command Center is the integrated development environment (IDE) of Next Byte Codes, Not Quite C and Not eXactly C. These programming languages are used to program the Robots in the Lego Mindstorms series.
+
+	- Go to Bricxcc directory and locate bricxcc_setup_3389.exe 
+		(or Download the latest release of bricxcc 3.3.8.9 (bricxcc 3.3.8.9) from https://sourceforge.net/projects/bricxcc/files/bricxcc/)
+	- DOuble click on the executable file bricxcc_setup_3389.exe to install 
+
+D. Install NQC Compiler
+------------------------
+	- Locate or Download NQC nqc-win-3-1-r6.zip from http://bricxcc.sourceforge.net/nqc/
+	- Right click on the nqc-win-3-1-r6.zip file and click on Extract to Folder ... 
+	- Open the decompressed directory nqc-win-3-1-r6 and 
+	- Copy (or move) the nqc.exe file to the same directory that contains the bricxcc.exe file (See C. Install Bricxcc (Bricx Command Center)). 
+	
+
+E. Download the RCX Firmware (if necessary)
+--------------------------------------------
+	- Locate firm0309.lgo: RCX firmware version 3.09 (or download it from https://pbrick.info/rcx-firmware/) 
+		This version came with the LEGO MindStorms Robotics Invention System version 1.0 and 1.5.
+	- Copy (or move) the nqc.exe file to the same directory that contains the bricxcc.exe file (See C. Install Bricxcc (Bricx Command Center)). 
+	- Install the firmware as follow:
+		-- Connect your Lego IR Tower to the computer USB port (as described in step A. above)
+		-- Place your RCX in front of the tower (Infrared ports facing each other), turn the RCX on.
+		-- Launch the Bricxcc IDE
+		-- Go to the Tools menu and select Download Firmware
+		-- Locate the firmware file on your computer ( C:\bricxcc\firm0309.lgo) and press ok
+		This will take up to three minutes. The firmware will stay in Brick's RAM as long as the batteries are not dead.
+
+
+See also http://neuron.eng.wayne.edu/LEGO_ROBOTICS/software_setup_tutorial.html for more details
+
+F. Have Fun Building robots and programs
+----------------------------------------
+	- Use Dave Baum's Definitive Guide to Lego Mindstorms book (there is a CD with examples and projects) as a guide
+	- A short tutorial is NQC_Tutorial.pdf (Programming Lego Robots using NQC by Mark Overmars and John Hansen)
+	- There are many websites and YouTube videos on NQC and Mindstorm
+		-- http://www.philohome.com/mindstorms.htm (Project Ideas for LEGO® MINDSTORMS™ & LEGO Technic)
+		-- See Lego Mindstorm Links.html file
+
